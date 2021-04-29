@@ -1,0 +1,14 @@
+{
+  "name": "microapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:master": "npm run start --prefix ./master",
+    "dev:app": "npm run start --prefix ./app",
+    "dev:all": "npm run dev:master; npm run dev:app"
+  },
+  "author": "",
+  "license": "ISC"
+}
