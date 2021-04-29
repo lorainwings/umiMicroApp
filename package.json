@@ -7,8 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:master": "npm run start --prefix ./master",
     "dev:app": "npm run start --prefix ./app",
-    "dev:all": "npm run dev:master; npm run dev:app"
+    "dev:all": "concurrently \"npm run dev:app\" \"wait-on http://localhost:8000 && npm run dev:master\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "wait-on": "^5.3.0"
+  }
 }
